@@ -104,3 +104,78 @@ var newItem = {
 };
 
 addItem(newItem);
+
+
+
+
+// function sortCart(name)
+// {
+    
+// }
+
+function findByName(name)
+{
+    var nw = [];
+    
+    for  (var i = 0; i < (cart).length; i++) {
+    // alert(myStringArray[i]);
+    if (cart[i].name === name)
+    {
+        nw.push(cart[i]);    
+    }
+    
+    return nw;
+    //Do something
+}
+
+}
+// {
+    
+// }
+
+
+
+console.log(findByName('EzLyf'));
+
+
+
+function sortCart(){
+  var len = cart.length;
+  var temp;
+  for(var i = 0; i <= len - 1; ++i) {
+    for (var j = 0; j <= len - 1; ++j) {
+      if(cart[i].name < cart[j].name) {
+        temp = cart[i];
+        cart[i] = cart[j];
+       cart[j] = temp;
+      }
+    }
+  }
+  return cart;
+}
+
+console.log(sortCart());
+
+
+
+
+function findByName(givenName){
+  for (var i = 0; i < cart.length; i++) {
+    if(cart[i].name == givenName){
+      console.log("Name: "+cart[i].name + "Price: " + cart[i].price + "Quantity: "+cart[i].quantity);
+    }
+  }
+}
+
+
+
+
+function totalBill(){
+  var totalAmount=0;
+  for( var i =0; i < cart.length; i++){
+    totalAmount = totalAmount + cart[i].quantity*cart[i].price;
+
+  }
+  return totalAmount;
+  }
+console.log(totalBill());
